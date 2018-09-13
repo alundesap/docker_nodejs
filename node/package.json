@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+		"@sap/xssec": "2.1.12",
+		"@sap/xsenv": "1.2.9",
+		"@sap/hdbext": "4.7.2",
+		"@sap/hana-client": "~2.3",
+		"mysql": "2.16.0",
+		"nodemon": "1.18.4",
+		"express": "~4.16",
+		"async": "latest",
+		"passport": "~0.4.0"
+  },
+  "description": "Pure NodeJS",
+  "devDependencies": {
+  },
+  "files": [],
+  "main": "server.js",
+  "name": "node",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "version": "1.0.0"
+}
