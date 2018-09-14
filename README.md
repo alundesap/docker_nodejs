@@ -6,13 +6,14 @@ docker build --no-cache -t alunde/nodejs:latest .
 docker build -t alunde/nodejs:latest .
 echo "docker run -ti -p 8080:8080 alunde/nodejs:latest"
 docker push alunde/nodejs:latest
-cf delete nodejs -f -r
-cf push nodejs --docker-image alunde/nodejs:latest -m 640M -k 2G -n mynodejs --no-start -u none
-cf bs nodejs dat368-uaa
-cf restage nodejs
-cf enable-ssh nodejs
-cf restart nodejs
-cf ssh nodejs
+cf delete docker_nodejs.dkr -f -r
+cf push docker_nodejs.dkr --docker-image alunde/nodejs:latest -m 640M -k 2G -n docker-nodejs --no-start -u none
+cf bs docker_nodejs.dkr docker-nodejs-uaa
+cf bs docker_nodejs.dkr docker-nodejs-dbt
+cf restage docker_nodejs.dkr
+cf enable-ssh docker_nodejs.dkr
+cf restart docker_nodejs.dkr
+cf ssh docker_nodejs.dkr
 ```
 Once you are shelled into the container, you can access the MySQL Sever through the Chisel Tunnel with this.
 ```
