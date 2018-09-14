@@ -9,7 +9,7 @@ docker push alunde/nodejs:latest
 cf delete docker_nodejs.dkr -f -r
 cf push docker_nodejs.dkr --docker-image alunde/nodejs:latest -m 640M -k 2G -n docker-nodejs --no-start -u none
 cf bs docker_nodejs.dkr docker-nodejs-uaa
-cf bs docker_nodejs.dkr docker-nodejs-dbt
+cf bs docker_nodejs.dkr docker-mysqls-dbt
 cf restage docker_nodejs.dkr
 cf enable-ssh docker_nodejs.dkr
 cf restart docker_nodejs.dkr
