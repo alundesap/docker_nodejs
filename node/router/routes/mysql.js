@@ -14,7 +14,7 @@ module.exports = () => {
 
 		const xsenv = require("@sap/xsenv");
                 let mysqlOptions = xsenv.getServices({
-                        'user-provided': { name: "docker-nodejs-dbt" }                
+                        'user-provided': { name: "docker-mysqls-dbt" }                
                 });
 
 		const myconf = mysqlOptions['user-provided'];

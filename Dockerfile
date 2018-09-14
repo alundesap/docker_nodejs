@@ -35,7 +35,8 @@ COPY node /home/vcap/app/node/
 #
 RUN npm config set @sap:registry "https://npm.sap.com/" ; npm config set registry "https://registry.npmjs.org/" ; npm config set strict-ssl true \
 	&& cd /home/vcap/app/node \
-	&& npm install \
+# Do an npm install in the app/node folder before the Docker build
+#	&& npm install \
 	&& chown -R vcap:vcap /home/vcap/app 
 # 
 EXPOSE 8080

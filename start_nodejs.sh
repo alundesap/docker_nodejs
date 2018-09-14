@@ -5,5 +5,8 @@
 #
 #
 echo "Sleepy..."
-sleep 10
+sleep 5
 #
+echo "Starting Node"
+cd /home/vcap/app/node
+node server.js

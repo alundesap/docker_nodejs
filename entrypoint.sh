@@ -6,6 +6,7 @@
 # Start the NodeJS Server
 #
 #exec /usr/local/bin/start_nodejs.sh &>/dev/null &
+su -p -c /usr/local/bin/start_nodejs.sh vcap &>/dev/null &
 #
 #
 # Start the Chisel Tunnel Client
