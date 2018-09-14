@@ -9,7 +9,7 @@ ENV PACKAGE_DIR $GOPATH/src/$PACKAGE
 #Install more stuff if needed
 # zypper ar http://download.opensuse.org/repositories/home:/darix:/apps/openSUSE_Leap_42.3/ darix
 RUN zypper -n ar http://download.opensuse.org/repositories/home:/darix:/apps/openSUSE_Leap_42.3/ darix
-RUN zypper -n --gpg-auto-import-keys install --no-recommends --auto-agree-with-licenses --force-resolution go git-core lsof netcat hostname mariadb-client nodejs8 npm8 \
+RUN zypper -n --gpg-auto-import-keys install --no-recommends --auto-agree-with-licenses --force-resolution go git-core lsof netcat hostname mariadb-client nodejs8 npm8 jq \
 	&& mkdir -p $PACKAGE_DIR \
 	&& git clone https://$PACKAGE.git $PACKAGE_DIR \
 	&& cd $PACKAGE_DIR \
